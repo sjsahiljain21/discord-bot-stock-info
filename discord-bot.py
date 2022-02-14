@@ -1,11 +1,13 @@
 import discord
 from discord.ext import commands
 import yfinance as yf
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 import pandas as pd
+from boto.s3.connection import S3Connection
 
-load_dotenv('.env')
+
+# load_dotenv('.env')
 # client = discord.Client()
 bot = commands.Bot(command_prefix='$')
 
@@ -47,5 +49,5 @@ async def info(ctx, symbol):
     else:
         await ctx.send(f"{symbol} not found")
 
-bot.run(os.getenv("TOKEN"))
+bot.run(os.environ['TOKEN'])
 
