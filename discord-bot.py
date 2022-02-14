@@ -26,14 +26,14 @@ async def on_ready():
 #     file = discord.File("businesstimes.xlsx")
 #     await ctx.send(file=file, content="Here is your excel file")
 
-# @bot.command()
-# async def price(ctx, symbol):
-#     current_price = yf.Ticker(f"{symbol}.NS").info['regularMarketPrice']
-#     print(current_price)
-#     if current_price:
-#         await ctx.send(f"The price of {symbol} is {current_price}")
-#     else:
-#         await ctx.send(f"{symbol} not found")
+@bot.command()
+async def price(ctx, symbol):
+    current_price = yf.Ticker(f"{symbol}.NS").info['regularMarketPrice']
+    print(current_price)
+    if current_price:
+        await ctx.send(f"The price of {symbol} is {current_price}")
+    else:
+        await ctx.send(f"{symbol} not found")
 
 @bot.command()
 async def info(ctx, symbol):
