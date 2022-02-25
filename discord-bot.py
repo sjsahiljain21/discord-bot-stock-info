@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import yfinance as yf
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 import pandas as pd
 from boto.s3.connection import S3Connection
