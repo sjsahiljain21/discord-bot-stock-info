@@ -6,6 +6,7 @@
   </a>
 
 <h3 align="center">Discord Bot Stock Info</h3>
+<br />
 </div>
 
 ## About The Project
